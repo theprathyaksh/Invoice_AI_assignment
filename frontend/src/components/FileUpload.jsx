@@ -29,7 +29,7 @@ const FileUpload = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("https://swipe-fullstack-intern-assignmentbackend.vercel.app/upload", formData, {
+      const response = await axios.post("https://swipe-fullstack-intern-assignment.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setLoading(false);
