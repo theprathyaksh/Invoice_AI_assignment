@@ -6,6 +6,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { GoogleAIFileManager } = require("@google/generative-ai/server");
 
 const app = express();
+const port = 5000;
 
 // Initialize Google Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
@@ -179,12 +180,7 @@ function parseGeminiResponse(text) {
   }
 }
 
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
-
-
-
-
-
-
-
-module.exports = app;
