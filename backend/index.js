@@ -18,7 +18,7 @@ const model = genAI.getGenerativeModel({
 // Middleware
 app.use(cors(
   {
-    origin: ["https://swipe-fullstack-intern-assignmentfrontend-3o51qs3ca.vercel.app", "http://localhost:5173"],
+    origin: ["https://swipe-fullstack-intern-assignme-git-8cf7db-prathyakshs-projects.vercel.app", "http://localhost:5173"],
   }
 ));
 app.use(express.json());
