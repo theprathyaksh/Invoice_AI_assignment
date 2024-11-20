@@ -15,7 +15,9 @@ const model = genAI.getGenerativeModel({
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://swipe-fullstack-intern-assignmentfrontend-7ea0to6i9.vercel.app/', 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
