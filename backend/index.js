@@ -6,7 +6,6 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { GoogleAIFileManager } = require("@google/generative-ai/server");
 
 const app = express();
-const port = 5000;
 
 // Initialize Google Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
@@ -16,9 +15,11 @@ const model = genAI.getGenerativeModel({
 });
 
 // Middleware
-app.use(cors({
-  origin: 'https://swipe-fullstack-intern-assignmentfrontend-7ea0to6i9.vercel.app/', 
-}));
+app.use(cors(
+  {
+    origin: ["https://swipe-fullstack-intern-assignmentfrontend-3o51qs3ca.vercel.app", "http://localhost:5173"],
+  }
+));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -180,7 +181,12 @@ function parseGeminiResponse(text) {
   }
 }
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
 
+
+
+
+
+
+
+
+module.exports = app;
