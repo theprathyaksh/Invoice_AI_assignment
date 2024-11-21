@@ -12,11 +12,11 @@ const App = () => {
   return (
     <div className="min-h-screen bg-white p-5 ">
       {/* Title */}
-      <h1 className="text-3xl font-bold text-center mb-5">Invoice Manager</h1>
-
+      <h2 className="text-3xl font-bold text-center mb-5 ">Automated Data Extraction and <br /> Invoice Management</h2>
+      <br />
       {/* File upload component */}
       <FileUpload />
-
+      <br />
       {/* Navigation Tabs */}
       <div className="tabs flex justify-center space-x-5 mt-5">
         {/* Button to switch to Invoices tab */}

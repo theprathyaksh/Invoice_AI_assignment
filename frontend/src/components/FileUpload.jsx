@@ -32,6 +32,8 @@ const FileUpload = () => {
       const response = await axios.post("https://swipe-fullstack-intern-assignment.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
+
+
       setLoading(false);
       setSuccess(true);
       console.log("Response data:", response.data); 
